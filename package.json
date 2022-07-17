@@ -1,0 +1,15 @@
+{
+  "name": "mywebpage",
+  "version": "1.0.0",
+  "description": "my webpage",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jonorusc",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1"
+  }
+}
