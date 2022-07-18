@@ -8,9 +8,81 @@ html, body {
   padding: 0;
   height: 100%;
   width: 100%;
-  font-style: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   background-color: #fff;
+  text-rendering: optimizeLegibility;
+}
+
+.darkmode-button {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 999;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #2C2B2B;
+  -webkit-box-shadow: 0px 11px 12px -3px rgba(0, 0, 0, 0.63);
+          box-shadow: 0px 11px 12px -3px rgba(0, 0, 0, 0.63);
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.darkmode-button:hover {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.darkmode-button i {
+  color: #fff;
+}
+
+footer {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1360px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.jaum-preview {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  display: none;
+  left: 0;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.63);
+}
+
+.jaum-preview.active {
+  display: block;
+}
+
+.section-title {
+  display: block;
+  margin-top: 0.4rem;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.d-block {
+  display: block;
 }
 
 /* header */
@@ -24,6 +96,7 @@ html, body {
   color: #fff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  z-index: 999;
 }
 
 .jaum-header .jaum-header-nav {
@@ -62,8 +135,8 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-column-gap: 0.4rem;
-          column-gap: 0.4rem;
+  -webkit-column-gap: 0.5rem;
+          column-gap: 0.5rem;
 }
 
 .jaum-header .jaum-header-nav .language img {
@@ -74,24 +147,27 @@ html, body {
   position: absolute;
   background-color: #fff;
   right: 0;
-  top: 100%;
+  top: 0;
   width: 100%;
   -webkit-box-shadow: 0px 11px 12px -3px rgba(0, 0, 0, 0.63);
           box-shadow: 0px 11px 12px -3px rgba(0, 0, 0, 0.63);
-  -webkit-transform: translateY(-300px);
-          transform: translateY(-300px);
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
   -webkit-transform: scale(0);
           transform: scale(0);
-  -webkit-transition: all .3s;
-  transition: all .3s;
-  -webkit-transform-origin: top right;
-          transform-origin: top right;
   padding: 0.3rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
+@media screen and (min-width: 720px) {
+  .jaum-header .jaum-header-nav .choose-language {
+    width: 300px;
+  }
+}
+
 .jaum-header .jaum-header-nav .choose-language.active {
+  display: block;
   -webkit-transform: translateY(0);
           transform: translateY(0);
   -webkit-transform: scale(1);
@@ -130,4 +206,274 @@ html, body {
 }
 
 /* end header */
+/* main */
+.jaum-main {
+  padding: 50px 0.7rem 0.7rem 0.7rem;
+}
+
+.jaum-main .container {
+  margin-top: 2rem;
+}
+
+.jaum-main .jaum-main-home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 2rem;
+}
+
+@media screen and (min-width: 720px) {
+  .jaum-main .jaum-main-home {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .jaum-main .jaum-main-home h2 {
+    font-size: 33px !important;
+  }
+}
+
+.jaum-main .jaum-main-home h2 {
+  font-size: 22px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.jaum-main .jaum-main-home .me-wrap {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 0.7rem;
+          column-gap: 0.7rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.jaum-main .jaum-main-home .me-wrap .photo {
+  width: 120px;
+  height: 120px;
+}
+
+.jaum-main .jaum-main-home .me-wrap .photo img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.jaum-main .jaum-main-home .me-wrap .use-most .use-most-title {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.jaum-main .jaum-main-home .me-wrap .use-most .use-most-paragraph {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 414px) {
+  .jaum-main .jaum-main-home .me-wrap .use-most {
+    width: calc(100% - 120px);
+  }
+}
+
+.jaum-main .jaum-main-home .jaum-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 1rem;
+}
+
+@media screen and (min-width: 720px) {
+  .jaum-main .jaum-main-home .jaum-links {
+    -webkit-box-orient: unset;
+    -webkit-box-direction: unset;
+        -ms-flex-direction: unset;
+            flex-direction: unset;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-column-gap: 1rem;
+            column-gap: 1rem;
+  }
+  .jaum-main .jaum-main-home .jaum-links .linkedin, .jaum-main .jaum-main-home .jaum-links .message {
+    width: 230px;
+  }
+}
+
+.jaum-main .jaum-main-home .jaum-links .linkedin {
+  background-color: #1C1D1F;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1rem;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.jaum-main .jaum-main-home .jaum-links .linkedin .title, .jaum-main .jaum-main-home .jaum-links .linkedin .ref {
+  display: block;
+}
+
+.jaum-main .jaum-main-home .jaum-links .linkedin .title {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.jaum-main .jaum-main-home .jaum-links .linkedin .ref {
+  color: #ffffff90;
+}
+
+.jaum-main .jaum-main-home .jaum-links .linkedin:hover {
+  background-color: #292929;
+}
+
+.jaum-main .jaum-main-home .jaum-links .message {
+  background-color: #fff;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid #1C1D1F;
+  padding: 1rem;
+  color: #1C1D1F;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.jaum-main .jaum-main-home .jaum-links .message .title {
+  font-size: 20px;
+}
+
+.jaum-main .jaum-main-home .jaum-links .message:hover {
+  background-color: #1C1D1F;
+  color: white;
+}
+
+.jaum-main .jaum-main-knowme {
+  margin-top: 7rem;
+  text-align: center;
+  position: relative;
+}
+
+.jaum-main .jaum-main-knowme .iveworked {
+  margin-top: 3rem;
+  text-align: start;
+}
+
+@media screen and (min-width: 820px) {
+  .jaum-main .jaum-main-knowme .iveworked {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 5rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.jaum-main .jaum-main-knowme .iveworked .work-place {
+  margin-bottom: 5rem;
+}
+
+.jaum-main .jaum-main-knowme .iveworked .work-place .work-place-title {
+  text-decoration: none;
+  color: #1C1D1F;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.jaum-main .jaum-main-knowme .mypersonals {
+  margin-top: 3rem;
+  text-align: start;
+}
+
+@media screen and (min-width: 820px) {
+  .jaum-main .jaum-main-knowme .mypersonals {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.jaum-main .jaum-main-knowme .mypersonals .project {
+  margin-bottom: 2rem;
+}
+
+.jaum-main .jaum-main-knowme .mypersonals .project .project-title {
+  color: #1C1D1F;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.jaum-main .jaum-main-knowme .mypersonals .project .project-photos {
+  margin-top: 1rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (320px)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 320px);
+  -ms-grid-rows: (244px)[auto-fit] !important;
+      grid-template-rows: repeat(auto-fit, 244px) !important;
+  gap: 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+}
+
+.jaum-main .jaum-main-knowme .mypersonals .project .project-photos img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.jaum-main .jaum-main-knowme .mypersonals .project .project-see-in .title {
+  font-weight: 500;
+}
+
+.jaum-main .jaum-main-knowme .mypersonals .project .project-see-in .deploy {
+  color: #1C1D1F;
+}
+
+/* end main */
 /*# sourceMappingURL=style.css.map */
