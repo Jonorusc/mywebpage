@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> <%= title %> </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body id="el-body" class="darkmode">
+    <header class="jaum-header">
+        <div class="container">
+            <nav class="jaum-header-nav">
+                <a href="#" class="brand">Jaum.lu</a>
+                <div 
+                    class="language"
+                    id="el-language"
+                >
+                    <img 
+                        src="./images/reino-unido.png" 
+                        id="el-language-preview"
+                    >
+                    <i class="fa-solid fa-language"></i>
+                </div>
+                <div 
+                    class="choose-language"
+                    id="el-choose-language"
+                >
+                    <div class="language-wrap">
+                        <div 
+                            class="language-option active"
+                            id="el-language-option-english"
+                        >
+                            English
+                            <img src="./images/reino-unido.png" alt="english-language">
+                        </div>
+                        <div 
+                            class="language-option"
+                            id="el-language-option-ptbr"    
+                        >
+                            Brazilian portuguese
+                            <img src="./images/brasil.png" alt="br-language">
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main 
+        class="jaum-main"
+        id="el-main"
+    >
+        <div class="container">
+            <section class="jaum-main-home">
+                <h2>Hello! My name is João Lucas and i'm a Web Devoloper, how can i help you?</h2>
+                <div class="me-wrap">
+                    <div class="photo"><img src="./images/me.jpg" alt=""></div>
+                    <div class="use-most">
+                        <span class="use-most-title">What i use most</span>
+                        <p class="use-most-paragraph">
+                            React.js, Node.js, Express, HTML, Javascript, CSS & PHP.
+                        </p>
+                    </div>
+                </div>
+                <div class="jaum-links">
+                    <a 
+                        href="https://www.linkedin.com/in/jaum-lu/" 
+                        class="linkedin"
+                        target="_blank"
+                    >
+                        <span class="title">Linkedin</span>
+                        <span class="ref">jaum.lu <i class="fa-solid fa-link"></i></span>
+                    </a>
+                    <a 
+                        href="/message" 
+                        class="message"
+                    >
+                        <span class="title">
+                            <i class="fa-solid fa-comment-dots"></i> 
+                            Text me
+                        </span> 
+                    </a>
+                </div>
+            </section>
+            <section class="jaum-main-knowme">        
+                <div class="jaum-preview">
+                    <img src="" alt="" id="el-preview-image">
+                </div>
+                <span class="d-block">Know me a little more</span>
+                <span class="section-title">What i have worked?</span>
+                <div class="iveworked">
+                    <div class="work-place">
+                        <a  
+                            class="work-place-title"
+                            href="https://terraurbanizada.com/"
+                            target="_blank"
+                        >
+                            Acesso à Terra Urbanizada 
+                            <i class="fa-solid fa-link"></i>
+                        </a>
+                        <p class="work-place-paragraph">
+                            I worked on the Tradus project (a cartography platform), where I was the PHP programmer, doing code refactoring, implementing new features and fixing bugs. 
+                            <br> <br>
+                            I managed to bring results to the team during the period I was working on the project.
+                        </p>
+                    </div>
+                </div>
+                <span class="section-title">My personal projects</span>
+                <div class="mypersonals">
+                    <div class="project">
+                        <a  
+                            class="project-title"
+                            href="https://github.com/Jonorusc/react-cloud-drive"
+                            target="_blank"
+                        >
+                            Cloud-drive 
+                            <i class="fa-solid fa-link"></i>
+                        </a>
+                        <div 
+                            class="project-photos"
+                            id="el-project-photos"
+                        >
+                            <img src="https://user-images.githubusercontent.com/56327459/177629878-02d9eaf2-ff89-4e05-9957-faea603dd105.png" alt="from github">
+                            <img src="https://user-images.githubusercontent.com/56327459/177630052-1bfe004e-1605-4b76-8bfc-5c1510031e1f.png" alt="from github">
+                        </div>
+                        <p class="project-paragraph">
+                            I worked on the Tradus project (a cartography platform), where I was the PHP programmer, doing code refactoring, implementing new features and fixing bugs. 
+                            <br> <br>
+                            I managed to bring results to the team during the period I was working on the project.
+                        </p>
+                        <div class="project-see-in">
+                            <span class="title">See in:</span>
+                            <a href="https://react-cloud-drive.netlify.app/" class="deploy" target="_blank">
+                                react-cloud-drive.netlify.app
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="darkmode-button" id="el-darkmode-btn">
+                <i class="fa-solid fa-moon"></i>
+            </div>
+            <footer>© 2022 João Lucas. All rights reserved.</footer>
+        </div>
+    </main>
+    <script src="./utils/utils.js"></script>
+    <script src="./main.js" type="module"></script>
+</body>
+</html>
